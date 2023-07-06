@@ -1,6 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 
 const app = express();
+
+// enable cors for all requests
+app.use(cors())
 
 const args = process.argv.splice(2)
 const env = args[0];
