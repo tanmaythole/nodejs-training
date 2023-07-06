@@ -19,6 +19,7 @@
   "homepage": "https://github.com/tanmaythole/nodejs-training#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mysql": "^2.18.1"
   }
