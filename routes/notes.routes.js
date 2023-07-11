@@ -1,3 +1,5 @@
+const verifyToken = require("../middleware/auth");
+
 module.exports = (app) => {
     const notes = require("../controller/notes.controller");
     const router = require("express").Router();
@@ -8,5 +10,5 @@ module.exports = (app) => {
     router.put("/:id", notes.updateOne);
     router.delete("/:id", notes.deleteOne);
 
-    app.use('/api/notes', router);
+    app.use('/api/notes', verifyToken, router);
 };

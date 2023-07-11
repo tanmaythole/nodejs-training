@@ -13,6 +13,7 @@ app.get("/", (req, res) => {
 });
 
 require("./routes/notes.routes")(app);
+require("./routes/auth.routes")(app);
 
 const args = process.argv.splice(2)
 const env = args[0];
